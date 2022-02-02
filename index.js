@@ -22,3 +22,14 @@ let Calculator = {
 	multiply : (a ,b) =>  a * b,
 	divide : (a ,b) =>  a / b,
 }
+
+let actionApplyer = function(startingInteger, arrayOfTransforms) {
+	if(arrayOfTransforms[0]) {
+		let multiply = arrayOfTransforms[0](startingInteger);
+		let addition = arrayOfTransforms[1](multiply);
+		return arrayOfTransforms[2](addition);
+	}
+	else {
+		return startingInteger;
+	}
+}
