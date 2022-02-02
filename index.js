@@ -8,9 +8,17 @@ let mondayWork = function(defaultActivity = 'go to the office') {
 	return `This Monday, I will ${defaultActivity}.`
 }
 
-// Defines wrapAdjective function according to the specification that when initialized with '*' creates a function that, when called, wraps an adjective in a highlight
+// Defined wrapAdjective function according to the specification that when initialized with '*' creates a function that, when called, wraps an adjective in a highlight
 let wrapAdjective = function(visualFlairString = '*') {
 	return function(adjective = 'special') {
 		return `You are ${visualFlairString}${adjective}${visualFlairString}!`;
 	}
+}
+
+// JavaScript Object called Calculator that has functions add, substract, multiply and divide.
+let Calculator = {
+	add : (a ,b) =>  a + b,
+	subtract : (a ,b) =>  a - b,
+	multiply : (a ,b) =>  a * b,
+	divide : (a ,b) =>  a / b,
 }
